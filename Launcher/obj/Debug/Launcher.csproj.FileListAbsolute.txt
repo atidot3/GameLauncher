@@ -1,0 +1,13 @@
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\Launcher.exe.config
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\Launcher.exe
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\Launcher.pdb
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\MetroFramework.Design.dll
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\MetroFramework.dll
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\bin\Debug\MetroFramework.Fonts.dll
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.LauncherSettings.resources
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.main.resources
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.Properties.Resources.resources
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.csproj.GenerateResource.Cache
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.exe
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.pdb
+D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.csprojResolveAssemblyReference.cache
