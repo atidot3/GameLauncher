@@ -1,0 +1,21 @@
+body, * { margin:0; padding:0; }
+a img { border:0; }
+
+html { overflow: hidden; width: 100%; height: 100% }
+body { background:black; font:11px Arial; color:#a5bfc7; background-repeat:no-repeat; overflow: hidden; width: 100%; height: 100%; border:none; }
+
+.logo { position:absolute; display:block; margin:-0px 0 0 100px; padding:0px 0px 0 0  }
+
+.news_box {position:absolute;top:130px;left:20px;width:445px}
+.news {position:relative; width:445px;line-height:15px;}
+.news {position:relative; top:0px;}
+.news .title {position:absolute;top:-51px;left:0;width:445px; height:80px;z-index:1;}
+.news .contents {position:relative;top:0;left:35px;width:410px; z-index:10000;}
+a { color:#a5bfc7; text-decoration:none; -moz-outline:none; }
+a:hover { color:white !important; }
+a:visited { color:#598cb8; }
+
+.section_icon { float:left;width:40px; margin-right:8px;}
+.items { float:left; width:360px;}
+.item { background:url(../images/bullet.gif) 0 6px no-repeat; padding-left:8px; }
+.date { float:right; }
