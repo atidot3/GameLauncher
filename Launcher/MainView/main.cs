@@ -21,6 +21,7 @@ namespace Launcher
 
         private long totalSizeToDownload = 0;
         private long currentDownloadSize = 0;
+        private long totalDownloaded = 0;
         private Downloader downloader = new Downloader();
         private Updater update = new Updater();
         private StateHandler myState = new StateHandler();
@@ -62,7 +63,7 @@ namespace Launcher
         /********************************/
         public void updateDownloadedAmount(long val)
         {
-            currentDownloadSize = currentDownloadSize + val;
+            currentDownloadSize = totalDownloaded + val;
             if (_TotalFile.Visible == false)
                 _TotalFile.Visible = true;
             _TotalFile.Text = FormatBytes(currentDownloadSize) + " of " + FormatBytes(totalSizeToDownload);
@@ -105,6 +106,13 @@ namespace Launcher
                 else
                     _ProgressBar.Value = 100;
             }
+        }
+        /*******************************
+            update the total downloaded size
+        /********************************/
+        public void updateAlreadyDownloaded(long val)
+        {
+            totalDownloaded += val;
         }
         /*******************************
             call back from updater (tell us if there is or not an update
@@ -265,7 +273,7 @@ namespace Launcher
             settingsForm.Hide();
             if (myState.getLauncherState() == LauncherState.PendingUpdate)
             {
-                downloader.PrepareDownload(this, downloadList);
+                downloader.PrepareDownload(this, downloadList, totalSizeToDownload);
                 myState.changeButtonState(LauncherState.Downloading, this);
             }
             else if (myState.getLauncherState() == LauncherState.Idle)

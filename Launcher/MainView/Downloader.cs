@@ -15,6 +15,8 @@ namespace Launcher
         private List<string> downloadList;
         public bool downloadInProgress = false;
         private long downloadedAmount = 0;
+        private long totalDownloaded = 0;
+        private long totalSize = 0;
         private NetworkInterface inter;
         private int currentFile = 0;
         private string currentFileString = "";
@@ -22,10 +24,11 @@ namespace Launcher
             prepare the download (view, list to download)
             then prepare the worker
         /********************************/
-        public void PrepareDownload(main fromMain, List<string> _downloadList)
+        public void PrepareDownload(main fromMain, List<string> _downloadList, long totalSizeToDownload)
         {
             MainView = fromMain;
             downloadList = _downloadList;
+            totalSize = totalSizeToDownload;
             Worker = new BackgroundWorker();
             Worker.WorkerReportsProgress = true;
             Worker.WorkerSupportsCancellation = true;
@@ -94,8 +97,7 @@ namespace Launcher
                         currentFile = i;
                         currentFileString = Path.GetFileName(downloadList[i]);
                         i++;
-                        int downloadProgress = (i * 100 / downloadList.Count);
-                        Worker.ReportProgress(downloadProgress);
+                        Worker.ReportProgress((int)((downloadedAmount / totalSize) * 100));
                     }
                 }
             }
@@ -108,8 +110,12 @@ namespace Launcher
             // update GUI method.
             if (MainView != null && MainView.Created)
             {
-                MainView.Invoke(new Action(() => MainView.updateDownloadingInfo(currentFile, downloadList.Count, currentFileString)));
+                MainView.Invoke(new Action(() => MainView.updateDownloadingInfo(currentFile+1, downloadList.Count, currentFileString)));
                 MainView.Invoke(new Action(() => MainView.updateDownloadedAmount(downloadedAmount)));
+            }
+            if (e.ProgressPercentage == 100)
+            {
+                MainView.Invoke(new Action(() => MainView.UpdateCompleted()));
             }
         }
         /*******************************
@@ -125,14 +131,6 @@ namespace Launcher
             {
                 MessageBox.Show(e.ToString());
             }
-            else
-            {
-                if (MainView != null && MainView.Created)
-                {
-                    MainView.Invoke(new Action(() => MainView.UpdateCompleted()));
-                }
-            }
-            inter.StopNetworkInterface();
         }
         /*******************************
             start the download of x file at y location
@@ -161,13 +159,11 @@ namespace Launcher
         /********************************/
         void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            if (e.ProgressPercentage == 100)
-            {
-                downloadedAmount = e.TotalBytesToReceive;
-            }
             if (MainView != null && MainView.Created)
             {
+                downloadedAmount = e.BytesReceived;
                 MainView.Invoke(new Action(() => MainView.updateProgressBarValue()));
+                MainView.Invoke(new Action(() => MainView.updateDownloadedAmount(downloadedAmount)));
             }
         }
         /*******************************
@@ -183,7 +179,16 @@ namespace Launcher
             {
                 _wc.CancelAsync();
             }
+
             downloadInProgress = false;
+
+            totalDownloaded += downloadedAmount;
+            MainView.Invoke(new Action(() => MainView.updateAlreadyDownloaded(downloadedAmount)));            
+            if ( ( (totalDownloaded / totalSize) * 100) == 100 || currentFile == downloadList.Count)
+            {
+                MainView.Invoke(new Action(() => MainView.UpdateCompleted()));
+                inter.StopNetworkInterface();
+            }
         }
     }
 }
