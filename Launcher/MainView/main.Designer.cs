@@ -180,7 +180,7 @@
             this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(1000, 508);
             this.webBrowser1.TabIndex = 19;
-            this.webBrowser1.Url = new System.Uri("http://127.0.0.1/Update/news.html", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri("http://google.de", System.UriKind.Absolute);
             // 
             // play
             // 
@@ -209,6 +209,8 @@
             this.font.BackColor = System.Drawing.Color.Black;
             this.font.BackgroundImage = global::Launcher.Properties.Resources.font;
             this.font.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.font.Image = global::Launcher.Properties.Resources.bg;
+            this.font.InitialImage = global::Launcher.Properties.Resources.bg;
             this.font.Location = new System.Drawing.Point(0, 0);
             this.font.Name = "font";
             this.font.Size = new System.Drawing.Size(1000, 600);
@@ -234,12 +236,13 @@
             this.Controls.Add(this.font);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "main";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Atidote Launcher";
+            this.Text = "GAMENAME Launcher";
             this.TransparencyKey = System.Drawing.Color.Lime;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);
             this.Load += new System.EventHandler(this.main_Load);

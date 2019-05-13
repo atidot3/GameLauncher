@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Drawing;
 using Launcher.MainView;
+using System.Net;
 
 namespace Launcher
 {
@@ -22,7 +23,7 @@ namespace Launcher
         private long totalSizeToDownload = 0;
         private long currentDownloadSize = 0;
         private long totalDownloaded = 0;
-        private Downloader downloader = new Downloader();
+        public Downloader downloader = new Downloader();
         private Updater update = new Updater();
         private StateHandler myState = new StateHandler();
         private Thread thread;
@@ -312,13 +313,19 @@ namespace Launcher
             play.FlatStyle = FlatStyle.Flat;
             play.FlatAppearance.BorderSize = 0;
             play.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            webBrowser1.Navigate(Launcher.Properties.Resources.UrlLocation + "patchnote.html");
         }
         /*******************************
             click on close
         /********************************/
         private void Close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            downloader.CancelWorker();
+            main.ActiveForm.Close();
+            //System.Environment.Exit(1);
+            //Application.ExitThread();
+            //Application.Exit();
+            
         }
         /*******************************
             click on minimize
@@ -378,7 +385,7 @@ namespace NetworkThing
         }
         public static string getGameName()
         {
-            return Launcher.Properties.Resources.LauncherExe;
+            return System.IO.Path.GetFullPath("./") + "/game/" + Launcher.Properties.Resources.LauncherExe;
         }
         public static string getManifestFile()
         {
@@ -390,7 +397,24 @@ namespace NetworkThing
         }
         public static string getDownloadUrl()
         {
-            return Launcher.Properties.Resources.UrlLocation;
+            if(!File.Exists("LauncherSettings.ini"))
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile(Launcher.Properties.Resources.UrlLocation + "LauncherSettings.ini", "LauncherSettings.ini");
+                }
+            else
+                using (var client = new WebClient())
+                {
+                    IniFile ini2 = new IniFile("LauncherSettings.ini");
+                    String url = ini2.Read("DownloadUrl", "Launcher");
+                    client.DownloadFile(url + "LauncherSettings.ini", "LauncherSettings.ini");
+                }
+
+            IniFile ini = new IniFile("LauncherSettings.ini");
+            if (ini.KeyExists("Launcher"))
+                return ini.Read("DownloadUrl", "Launcher");
+            else
+                return Launcher.Properties.Resources.UrlLocation;
         }
     }
 }

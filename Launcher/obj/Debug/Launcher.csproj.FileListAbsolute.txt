@@ -11,3 +11,37 @@ D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.csproj.Genera
 D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.exe
 D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.pdb
 D:\Unreal Projects\ArtOfSword\Launcher\Launcher\obj\Debug\Launcher.csprojResolveAssemblyReference.cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\Launcher.exe.config
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\Launcher.exe
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\Launcher.pdb
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\MetroFramework.Design.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\MetroFramework.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\MetroFramework.Fonts.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.csprojResolveAssemblyReference.cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.LauncherSettings.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.main.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.Properties.Resources.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.csproj.GenerateResource.Cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.csproj.CoreCompileInputs.cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.exe
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Debug\Launcher.pdb
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\FileDownloader.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\Newtonsoft.Json.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\Launcher.exe.config
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\Launcher.exe
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\Launcher.pdb
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\FileDownloader.dll
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\MetroFramework.Design.dll
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\MetroFramework.dll
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.LauncherSettings.resources
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.main.resources
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.Properties.Resources.resources
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.csproj.GenerateResource.Cache
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.csproj.CoreCompileInputs.cache
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.exe
+C:\Users\MrElmida\Desktop\GitHub\GameLauncher\Launcher\obj\Debug\Launcher.pdb

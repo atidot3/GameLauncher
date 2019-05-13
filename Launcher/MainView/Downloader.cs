@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Net;
 using System.IO;
 using System.Windows.Forms;
+using FileDownloader;
 
 namespace Launcher
 {
@@ -11,7 +12,8 @@ namespace Launcher
     {
         private main MainView;
         private BackgroundWorker Worker;
-        private WebClient _wc = new WebClient();
+        public static IDownloadCache downloadCache = new Cache();
+        public IFileDownloader _wc = new FileDownloader.FileDownloader(downloadCache);
         private List<string> downloadList;
         public bool downloadInProgress = false;
         private long downloadedAmount = 0;
@@ -52,9 +54,13 @@ namespace Launcher
         /********************************/
         public void CancelWorker()
         {
-            _wc.Dispose();
-            Worker.CancelAsync();
-            inter.StopNetworkInterface();
+            if (Worker != null)
+            {
+                Worker.Dispose();
+                Worker.CancelAsync();
+            }
+            if(inter != null)
+                inter.StopNetworkInterface();
         }
         /*******************************
             simple function to check if a file exist
@@ -77,7 +83,7 @@ namespace Launcher
                 if (Worker.CancellationPending)
                 {
                     MainView = null;
-                    _wc.CancelAsync();
+                    _wc.CancelDownloadAsync();
                     e.Cancel = true;
                 }
                 else
@@ -139,10 +145,10 @@ namespace Launcher
         {
             try
             {
-                using (_wc = new WebClient())
+                using (_wc = new FileDownloader.FileDownloader(downloadCache))
                 {
-                    _wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
-                    _wc.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+                    _wc.DownloadProgressChanged += new EventHandler<DownloadFileProgressChangedArgs>(client_DownloadProgressChanged);
+                    _wc.DownloadFileCompleted += new EventHandler<DownloadFileCompletedArgs>(client_DownloadFileCompleted);
                     _wc.DownloadFileAsync(new Uri(fileToDownloadLink), PathToSaveFile);
                 }
             }
@@ -157,7 +163,7 @@ namespace Launcher
         /*******************************
             update the progress of the download
         /********************************/
-        void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        void client_DownloadProgressChanged(object sender, DownloadFileProgressChangedArgs e)
         {
             if (MainView != null && MainView.Created)
             {
@@ -169,25 +175,32 @@ namespace Launcher
         /*******************************
             file downloaded
         /********************************/
-        void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        void client_DownloadFileCompleted(object sender, DownloadFileCompletedArgs e)
         {
-            if (e.Cancelled)
+            if (e.State == CompletedState.Canceled)
             {
-                _wc.CancelAsync();
+                _wc.CancelDownloadAsync();
             }
             else if (e.Error != null)
             {
-                _wc.CancelAsync();
+                _wc.CancelDownloadAsync();
             }
 
             downloadInProgress = false;
 
             totalDownloaded += downloadedAmount;
-            MainView.Invoke(new Action(() => MainView.updateAlreadyDownloaded(downloadedAmount)));            
-            if ( ( (totalDownloaded / totalSize) * 100) == 100 || currentFile == downloadList.Count)
+            try
             {
-                MainView.Invoke(new Action(() => MainView.UpdateCompleted()));
-                inter.StopNetworkInterface();
+                MainView.Invoke(new Action(() => MainView.updateAlreadyDownloaded(downloadedAmount)));
+                if (((totalDownloaded / totalSize) * 100) == 100 || currentFile == downloadList.Count)
+                {
+                    MainView.Invoke(new Action(() => MainView.UpdateCompleted()));
+                    inter.StopNetworkInterface();
+                }
+            }
+            catch
+            {
+
             }
         }
     }
