@@ -1,6 +1,5 @@
 # GameLauncher
+Using the FileDownloader Library from Avira 
+https://github.com/Avira/.NetFileDownloader
 
-You can feel free to support at this link ❤👍 :
-https://paypal.me/EntringerAntony
-
-![alt tag](https://forums.unrealengine.com/attachment.php?attachmentid=121730&d=1481829990)
+![alt tag](http://test.mrelmida.tk/image.png)

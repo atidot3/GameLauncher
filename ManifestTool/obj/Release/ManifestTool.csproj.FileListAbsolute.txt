@@ -1,0 +1,9 @@
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\bin\Release\ManifestTool.exe
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\bin\Release\ManifestTool.pdb
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.csprojResolveAssemblyReference.cache
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.Form1.resources
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.Properties.Resources.resources
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.csproj.GenerateResource.Cache
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.csproj.CoreCompileInputs.cache
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.exe
+H:\Filme\The12Techtest\GameLauncher-master\ManifestTool\obj\Release\ManifestTool.pdb

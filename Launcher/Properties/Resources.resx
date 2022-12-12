@@ -117,33 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttonUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LauncherExe" xml:space="preserve">
-    <value>Launcher.exe</value>
-    <comment>name of the Launcher.exe</comment>
-  </data>
   <data name="Manifest" xml:space="preserve">
     <value>LauncherManifest.dat</value>
     <comment>manifest file name</comment>
   </data>
-  <data name="settingsFont" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingsFont.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UrlLocation" xml:space="preserve">
-    <value>http://88.190.215.114/Update/</value>
-    <comment>location of the update folder</comment>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="XmlFile" xml:space="preserve">
     <value>version.xml</value>
     <comment>name of the xmlFile</comment>
+  </data>
+  <data name="LauncherExe" xml:space="preserve">
+    <value>ILMergeGui.exe</value>
+    <comment>name of the Launcher.exe</comment>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settingsFont" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingsFont.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UrlLocation" xml:space="preserve">
+    <value>http://test.mrelmida.tk/game/</value>
+    <comment>location of the update folder</comment>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

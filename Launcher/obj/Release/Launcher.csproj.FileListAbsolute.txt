@@ -1,0 +1,17 @@
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\FileDownloader.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\MetroFramework.Design.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\MetroFramework.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\MetroFramework.Fonts.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\Newtonsoft.Json.dll
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\Newtonsoft.Json.xml
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.csprojResolveAssemblyReference.cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.LauncherSettings.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.main.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.Properties.Resources.resources
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.csproj.GenerateResource.Cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.csproj.CoreCompileInputs.cache
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\Launcher.exe.config
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\Launcher.exe
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\bin\Release\Launcher.pdb
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.exe
+H:\Filme\The12Techtest\GameLauncher-master\Launcher\obj\Release\Launcher.pdb

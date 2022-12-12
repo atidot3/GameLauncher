@@ -77,11 +77,21 @@ namespace ManifestTool
         }
         private void Start_Click(object sender, EventArgs e)
         {
+            if(Directory.Exists(@DirectoryPath.Text) && path == "")
+            {
+                path = DirectoryPath.Text;
+                Log("Discovering file...");
+                DirSearch(path);
+                Log(fileAmout + " file, please press start to launch the process.");
+                this.progressBar1.Maximum = fileAmout;
+            }
+                
+
             if (path != "")
             {
-                if (!File.Exists("manifest.dat"))
+                if (!File.Exists(path + @"/LauncherManifest.dat"))
                 {
-                    StreamWriter writetext = new StreamWriter("manifest.dat");
+                    StreamWriter writetext = new StreamWriter(path + @"/LauncherManifest.dat");
                     foreach (string s in files)
                     {
                         // Keep only root path selected
@@ -89,7 +99,7 @@ namespace ManifestTool
                         this.progressBar1.Increment(1);
                         Log(file);
                         // start writing on file
-                        writetext.WriteLine(file + ":" + GetFileHash(s) + ":" + GetFileSize(s));
+                        writetext.WriteLine("game" + file + ":" + GetFileHash(s) + ":" + GetFileSize(s));
                     }
                     writetext.Close();
                     MessageBox.Show("Manifest file generated!.", "Done", MessageBoxButtons.OK);

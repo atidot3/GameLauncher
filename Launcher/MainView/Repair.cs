@@ -78,6 +78,10 @@ namespace Launcher
                         fileToDownload.Add(FilePath);
                         TotalSize += long.Parse(converted[2]); // size of the file
                     }
+                    //else if ()
+                    //{
+
+                    //}
                 }
                 counter+=1;
                 if (MainfForm != null && MainfForm.Created)
